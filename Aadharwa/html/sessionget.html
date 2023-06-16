@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Session Remove</title>
+</head>
+<body>
+<h1 style="text-align:center;">Session Remove</h1>
+<center>
+    <form method="post">
+        {% csrf_token %}
+Key<input type="text" name="key" value="{{key}}">
+    <br>
+    <input type="submit" value="Submit">
+    <tr><td colspan="2"><a href="http://127.0.0.1:8000/Adhar/sessionview">check views</a></td></tr>
+    </form>
+</center>
+</body>
+</html>

@@ -50,6 +50,31 @@ def all (request):
      return render(request, "all.html", {"aadhars": aadhars})
 
 
+def sessionget(request):
+    key = ""
+    if request.POST:
+        key = request.POST["key"]
+        try:
+            request.session.pop(key)
+        except:
+            pass
+
+    return render(request,"sessionget.html", {"key": key})
+
+def sessionset(request):
+      key = ""
+      value = ""
+      if request.POST:
+        key = request.POST["key"]
+        value = request.POST["value"]
+        request.session[key] = value  
+      return render(request,"sessionset.html", {"key": key, "value": value})
+
+def sessionview(request):
+    request.session["score"] = 90
+    request.session["scor0e"] 
+    return render(request, "sessionview.html", {"session": request.session.items()})
+
 
 
 

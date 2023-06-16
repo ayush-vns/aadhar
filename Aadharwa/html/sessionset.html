@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Session Set</title>
+</head>
+<body>
+<h1 style="text-align:center;">Session Set</h1>
+<center>
+    <form method="post">
+        {% csrf_token %}
+Key<input type="text" name="key" value="{{key}}">
+    <br><br>
+    Value<input type="text" name="value" value="{{value}}">
+    <br><br>
+    <input type="submit" value="Submit">
+    </form>
+    {{data}}
+    <tr><td colspan="2"><a href="http://127.0.0.1:8000/Adhar/sessionview">check views</a></td></tr>
+</center>
+</body>
+</html>
